@@ -1,5 +1,4 @@
 import React from 'react'
-import Container from './Container'
 import Footer from './Footer'
 
 const Layout = ({children}: {children: React.ReactNode}) => {
@@ -7,9 +6,7 @@ const Layout = ({children}: {children: React.ReactNode}) => {
     <>
       {children}
 
-      <Container>
-        <Footer />
-      </Container>
+      <Footer />
     </>
   )
 }
