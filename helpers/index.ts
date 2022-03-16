@@ -1,10 +1,24 @@
 import dayjs from 'dayjs'
+import React from 'react'
 import {parseCookies, setCookie as sCookie} from 'nookies'
+
+/** --- COPIED --- **/
 
 export const classNames = (...classes: string[]): string =>
   classes.filter(Boolean).join(' ')
 
-/** --- COPIED --- **/
+// eslint-disable-next-line no-unused-vars
+export function setPageState<T>(
+  setState: React.Dispatch<React.SetStateAction<T>>,
+  current: T,
+  updates: T,
+): T {
+  const newState = {...current, ...updates}
+
+  setState(newState)
+
+  return newState
+}
 
 export const getCookie = (name) => {
   const cookies = parseCookies()

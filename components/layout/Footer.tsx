@@ -17,7 +17,7 @@ const Footer = () => {
             target="_blank"
             onClick={() =>
               gtagEvent({
-                action: 'footer__candee-generations__link',
+                action: 'footer__candee_generations__link',
                 category: 'engagement',
                 label: 'click_event',
               })

@@ -16,7 +16,7 @@ const Header = ({
       )}
     >
       <h2 className="mx-auto text-4xl font-king font-extrabold tracking-tight text-gray-900 lg:text-7xl">
-        <span className="-mb-1 pb-1 block bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+        <span className="-mb-1 pb-1 block bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent pr-1">
           {children}
         </span>
       </h2>

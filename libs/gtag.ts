@@ -1,9 +1,11 @@
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-export function pageview(url: URL) {
-  const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID
+import config from '../config'
 
-  if (GA_TRACKING_ID) {
-    window.gtag('config', GA_TRACKING_ID, {
+export function pageview(url: URL) {
+  const {gtagId} = config
+
+  if (gtagId) {
+    window.gtag('config', gtagId, {
       page_path: url,
     })
   }

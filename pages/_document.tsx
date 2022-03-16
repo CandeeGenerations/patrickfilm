@@ -1,17 +1,18 @@
 import Document, {Html, Head, Main, NextScript} from 'next/document'
+import config from '../config'
 
 export default class PatrickFilmDocument extends Document {
   render() {
-    const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID
+    const {gtagId, paypalClientId} = config
 
     return (
       <Html>
         <Head>
-          {GA_TRACKING_ID && (
+          {gtagId && (
             <>
               <script
                 async
-                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+                src={`https://www.googletagmanager.com/gtag/js?id=${gtagId}`}
               />
               <script
                 dangerouslySetInnerHTML={{
@@ -19,11 +20,14 @@ export default class PatrickFilmDocument extends Document {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${GA_TRACKING_ID}', {
+              gtag('config', '${gtagId}', {
                 page_path: window.location.pathname,
               });
           `,
                 }}
+              />
+              <script
+                src={`https://www.paypal.com/sdk/js?client-id=${paypalClientId}&enable-funding=venmo`}
               />
             </>
           )}
