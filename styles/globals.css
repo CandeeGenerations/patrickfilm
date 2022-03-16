@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Kingthings-Exeter';
+  src: url('/fonts/Kingthings-Exeter.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #edf2f3;
+}
+
+.font-king {
+  font-family: 'Kingthings-Exeter';
+}
+
+a {
+  color: #4e9bab;
+}
+
+a:active {
+  color: #20484f;
+}
