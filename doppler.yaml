@@ -1,0 +1,3 @@
+setup:
+  project: patrickfilm
+  config: dev

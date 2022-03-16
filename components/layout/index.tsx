@@ -1,14 +1,12 @@
 import React from 'react'
 import Footer from './Footer'
 
-const Layout = ({children}) => {
+const Layout = ({children}: {children: React.ReactNode}) => {
   return (
     <>
-      <div className="container max-w-screen-xl mx-auto p-5 md:p-16 lg:p-10">
-        {children}
+      {children}
 
-        <Footer />
-      </div>
+      <Footer />
     </>
   )
 }

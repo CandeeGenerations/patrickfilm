@@ -1,36 +1,46 @@
 import styled from '@emotion/styled'
 import dayjs from 'dayjs'
+import React from 'react'
 import {gtagEvent} from '../../libs/gtag'
+import Container from './Container'
 
 const Footer = () => {
   const year = dayjs().format('YYYY')
 
   return (
     <>
-      <Border className="relative" />
+      <Container>
+        <Border className="relative" />
 
-      <FooterWrapper className="relative flex items-center content-between lg:pb-20 pb-10 lg:flex-row flex-col">
-        <div className="flex-grow pb-3 lg:pb-0 text-center lg:text-left">
-          Designed by{' '}
-          <a
-            href="https://candeegenerations.com?ref=patrickfilm.net"
-            target="_blank"
-            onClick={() =>
-              gtagEvent({
-                action: 'footer__candee-generations__link',
-                category: 'engagement',
-                label: 'click_event',
-              })
-            }
-          >
-            Candee Generations
-          </a>
-        </div>
+        <FooterWrapper className="relative flex items-center content-between lg:pb-20 pb-10 lg:flex-row flex-col">
+          <div className="flex-grow pb-3 lg:pb-0 text-center lg:text-left">
+            Designed by{' '}
+            <a
+              href="https://candeegenerations.com?ref=patrickfilm.net"
+              target="_blank"
+              onClick={() =>
+                gtagEvent({
+                  action: 'footer__candee_generations__link',
+                  category: 'engagement',
+                  label: 'click_event',
+                })
+              }
+            >
+              Candee Generations
+            </a>
+          </div>
 
-        <div className="flex flex-grow-0">
-          &copy; 2022{year !== '2022' && ` - ${year}`}&nbsp;Ferris Films
-        </div>
-      </FooterWrapper>
+          <div className="flex flex-grow-0">
+            &copy; 2022{year !== '2022' && ` - ${year}`}&nbsp;Ferris Films
+          </div>
+        </FooterWrapper>
+      </Container>
+
+      <div
+        aria-hidden="true"
+        className="flex items-center justify-center h-48 bg-fixed bg-center bg-cover"
+        style={{backgroundImage: "url('/images/background-2.jpg')"}}
+      />
     </>
   )
 }

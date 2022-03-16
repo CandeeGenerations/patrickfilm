@@ -1,12 +1,12 @@
 import {DetailedHTMLProps} from 'react'
 import {Helmet} from 'react-helmet'
+import config from '../../config'
 import {siteTitle} from '../../helpers/constants'
 
-const SEO = () => {
-  const title = 'Slave to Servant'
+const SEO = ({title}: {title?: string}) => {
   const description = 'Slave to Servant Film'
   const pathname = ''
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  const siteUrl = config.siteUrl
   const url = siteUrl
   const fullURL = (path: string) => (path ? `${siteUrl}${path}` : siteUrl)
   const image = '/favicon/android-chrome-512x512.png'
@@ -52,7 +52,7 @@ const SEO = () => {
 
   return (
     <Helmet
-      title={`${title} | ${siteTitle}` || siteTitle}
+      title={title ? `${title} | ${siteTitle}` : siteTitle}
       htmlAttributes={{lang: 'en'}}
       meta={metaTags}
     >
