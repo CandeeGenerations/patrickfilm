@@ -11,7 +11,7 @@ const Hero = (): React.ReactElement => {
     <div className="relative bg-gray-900">
       <div
         aria-hidden="true"
-        className="flex items-center justify-center h-4/6 mb-12 bg-fixed bg-center"
+        className="flex items-center justify-center h-4/6 mb-12 bg-fixed bg-center md:bg-cover"
         style={{backgroundImage: "url('/images/background-2.jpg')"}}
       >
         <div
@@ -20,9 +20,13 @@ const Hero = (): React.ReactElement => {
         />
 
         <div className="relative max-w-6xl mx-auto pt-32 pb-16 px-6 flex flex-col items-center text-center sm:pt-64 sm:pb-32 lg:px-0">
-          <img src="/images/logo-white.svg" alt="" className="w-24 h-auto" />
+          <img
+            src="/images/logo-white.svg"
+            alt=""
+            className="w-16 lg:w-24 h-auto"
+          />
 
-          <h1 className="text-4xl font-king font-extrabold tracking-tight text-white lg:text-9xl mt-5 mb-10">
+          <h1 className="text-6xl font-king font-extrabold tracking-tight text-white lg:text-9xl mt-5 mb-10">
             Slave to Servant
           </h1>
 
