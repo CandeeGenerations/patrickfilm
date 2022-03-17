@@ -59,51 +59,40 @@ const Home = (): React.ReactElement => {
 
         <Content heading="About Slave to Servant">
           <p>
-            It might sound oxymoronic to say that independence is a rallying cry
-            for unaffiliated Baptists. But truly we can all unite around our
-            independence! Independence has been called a fundamental principle
-            in Baptist belief and practice. Francis Wayland stated,
-          </p>
-
-          <blockquote>
-            <p>
-              The Baptists have ever believed in the entire and absolute
-              independence of the churches. By this, we mean that every church
-              of Christ, that is, every company of believers united together
-              according to the laws of Christ, is wholly independent of every
-              other; that every church is perfectly capable of self-government;
-              and that, therefore, no one acknowledges any higher authority,
-              under Christ, than itself;
-            </p>
-          </blockquote>
-
-          <p>
-            But while we remain resolutely independent ecclesiastically, our
-            individual and corporate lives are nevertheless intertwined through
-            varying forms of relationships and interactions which are enabled
-            increasingly more through the vast network of technology and social
-            media. Independence doesn't need to mean isolation.
-          </p>
-
-          <h2>IBNet Helps Independents Connect</h2>
-
-          <p>
-            IBNet was born out of the need for a central gathering place of
-            independent Baptists on the internet. Baptists can be found all
-            across the web and on most social media platforms, but there has
-            been no central marketplace in which to meet and interrelate. IBNet
-            endeavors to meet this challenge.
+            Slave to Servant is a new film by Ferris Films. This gripping story
+            of the world-renowned Patrick of Ireland comes alive through this
+            dramatized retelling. Patrick went from rebellious youth in Roman
+            Britain, to slave on the treacherous island of ancient Ireland, to
+            escape back to Britain, and finally, a return to Ireland as servant
+            and missionary of Jesus Christ. See this historical account
+            reenacted on screen as you’ve never seen it before.
           </p>
 
           <p>
-            We firmly uphold the foundational principle of independence and the
-            Baptist distinctive of the primacy and autonomy of the local church.
-            We also understand the importance of being able to reach out and
-            interact with others of like faith and practice for all of the
-            reasons, small or great, that have brought independent Baptists
-            together in the past. Our desire is that you find this website a
-            useful ministry tool for connecting with like-minded churches,
-            organizations, and individuals.
+            Patrick quoted the Apostle Paul extensively, and patterned his
+            ministry in Ireland after the church-planting ministry of the
+            apostle to the Gentiles. Like Paul, Patrick came to a sudden
+            realization of his sinful state, and with a repentant heart, placed
+            his trust in Jesus Christ as his Saviour. Later with great
+            missionary zeal, and against the advice of family, friends, and
+            religious leaders, Patrick put himself in harm's way to follow his
+            own "Macedonian call" and bring the gospel to a godless and pagan
+            people.
+          </p>
+
+          <p>
+            Our prayer is that God will use this film to cast a fresh vision of
+            Patrick's life and ministry, and that his missionary efforts will
+            continue to bear fruit today as his heart of surrender speaks to a
+            modern audience.
+          </p>
+
+          <p>
+            The production of this film is solely dependent on private
+            donations. We sincerely ask you to consider a generous donation of
+            any amount to help us reach our production budget and bring this
+            film to release. May the Lord use it to touch many, and may the
+            rewards abound to your account. God be glorified!
           </p>
         </Content>
 
