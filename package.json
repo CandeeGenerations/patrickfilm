@@ -1,6 +1,6 @@
 {
   "name": "patrickfilm",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "scripts": {
     "dev": "doppler run --command='next dev -p 1701'",
