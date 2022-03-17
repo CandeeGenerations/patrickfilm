@@ -38,7 +38,7 @@ const Footer = () => {
 
       <div
         aria-hidden="true"
-        className="flex items-center justify-center h-48 bg-fixed bg-center bg-cover"
+        className="flex items-center justify-center h-48 bg-fixed bg-center"
         style={{backgroundImage: "url('/images/background-2.jpg')"}}
       />
     </>
