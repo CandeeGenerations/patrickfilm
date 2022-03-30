@@ -1,0 +1,13 @@
+type Donation {
+    paypalId: String # id
+    status: String # status
+    date: String # update_time
+    name: String # `${payer.name.give_name} ${payer.name.surname}`
+    emailAddress: String # payer.email_address
+    payerId: String # payer.payer_id
+    amount: String # purchase_units[0].amount.value
+}
+
+type Query {
+    findDonations: [Donation]
+}

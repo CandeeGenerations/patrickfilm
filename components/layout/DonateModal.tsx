@@ -2,6 +2,9 @@ import {Dialog, Transition} from '@headlessui/react'
 import {CheckCircleIcon, XIcon} from '@heroicons/react/outline'
 import React, {Fragment, useState} from 'react'
 import {PayPalButton} from 'react-paypal-button-v2'
+import {findDonations} from '../../api'
+import config from '../../config'
+import {addCommas} from '../../helpers'
 import {siteTitle} from '../../helpers/constants'
 import {gtagEvent} from '../../libs/gtag'
 import Header from '../typography/Header'
@@ -16,6 +19,7 @@ interface IDonateModal {
 interface IPageState {
   amount?: string
   error?: string
+  total: number
   success: boolean
 }
 
@@ -23,13 +27,26 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
   const [pageState, setState] = useState<IPageState>({
     amount: '20',
     success: false,
+    total: 0,
   })
 
   React.useEffect(() => {
     if (open) {
-      setState({amount: '20', success: false, error: undefined})
+      const load = async () => {
+        const donations = await findDonations()
+        let total = 0
+
+        donations.forEach((x) => (total += parseFloat(x.amount)))
+
+        setState({amount: '20', success: false, error: undefined, total})
+      }
+
+      load()
     }
   }, [open])
+
+  const calculateProgress = (goal: string, total: number): number =>
+    Math.ceil((total / parseFloat(goal)) * 100)
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -156,7 +173,41 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
                           </p>
                         </Content>
 
-                        <Header>Goal: $4,000</Header>
+                        <Header>
+                          Goal: ${addCommas(parseFloat(config.donation.goal))}
+                        </Header>
+
+                        <div className="flex justify-between mb-1">
+                          <span className="text-base font-medium text-primary-700">
+                            Amount Raised
+                          </span>
+
+                          <span className="text-sm font-medium text-primary-700">
+                            ${addCommas(pageState.total)}
+                          </span>
+                        </div>
+
+                        <div className="w-full h-6 bg-gray-200 rounded-full">
+                          <div
+                            className="font-medium text-center p-0.5 pt-1 text-white leading-none h-6 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full"
+                            style={{
+                              width: `${calculateProgress(
+                                config.donation.goal,
+                                pageState.total,
+                              )}%`,
+                            }}
+                          >
+                            {calculateProgress(
+                              config.donation.goal,
+                              pageState.total,
+                            ) >= 10
+                              ? `${calculateProgress(
+                                  config.donation.goal,
+                                  pageState.total,
+                                )}%`
+                              : ''}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -169,11 +220,12 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
                         label="Your donation amount"
                         value={pageState.amount}
                         onChange={(e) =>
-                          setState({
+                          setState(({total}) => ({
                             amount: e.target.value,
                             error: undefined,
                             success: false,
-                          })
+                            total,
+                          }))
                         }
                         onBlur={() => {
                           if (
@@ -201,9 +253,9 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
                           ? 1
                           : pageState.amount
                       }
-                      onSuccess={() =>
+                      onSuccess={(result) => {
                         setState((prevState) => ({...prevState, success: true}))
-                      }
+                      }}
                       style={{layout: 'horizontal', tagline: false}}
                     />
                   </div>
