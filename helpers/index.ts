@@ -2,6 +2,9 @@ import dayjs from 'dayjs'
 import React from 'react'
 import {parseCookies, setCookie as sCookie} from 'nookies'
 
+export const addCommas = (num: number): string =>
+  num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+
 /** --- COPIED --- **/
 
 export const classNames = (...classes: string[]): string =>

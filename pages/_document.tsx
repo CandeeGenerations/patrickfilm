@@ -3,7 +3,10 @@ import config from '../config'
 
 export default class PatrickFilmDocument extends Document {
   render() {
-    const {gtagId, paypalClientId} = config
+    const {
+      base: {gtagId},
+      donation: {paypalClientId},
+    } = config
 
     return (
       <Html>
@@ -27,7 +30,7 @@ export default class PatrickFilmDocument extends Document {
                 }}
               />
               <script
-                src={`https://www.paypal.com/sdk/js?client-id=${paypalClientId}&enable-funding=venmo`}
+                src={`https://www.paypal.com/sdk/js?client-id=${paypalClientId}&disable-funding=credit&enable-funding=venmo`}
               />
             </>
           )}

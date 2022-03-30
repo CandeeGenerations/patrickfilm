@@ -2,7 +2,7 @@
 import config from '../config'
 
 export function pageview(url: URL) {
-  const {gtagId} = config
+  const {gtagId} = config.base
 
   if (gtagId) {
     window.gtag('config', gtagId, {

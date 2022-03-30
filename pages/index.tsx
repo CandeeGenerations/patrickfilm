@@ -22,7 +22,7 @@ export const HomeContext = React.createContext<{
 }>({})
 
 const Home = (): React.ReactElement => {
-  const {trailerUrl} = config
+  const {trailerUrl} = config.base
   const [pageState, stateFunc] = React.useState<IPageState>({
     open: false,
   })

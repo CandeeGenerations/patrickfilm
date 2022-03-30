@@ -6,7 +6,7 @@ import {siteTitle} from '../../helpers/constants'
 const SEO = ({title}: {title?: string}) => {
   const description = 'Slave to Servant Film'
   const pathname = ''
-  const siteUrl = config.siteUrl
+  const {siteUrl} = config.base
   const url = siteUrl
   const fullURL = (path: string) => (path ? `${siteUrl}${path}` : siteUrl)
   const image = '/favicon/android-chrome-512x512.png'
