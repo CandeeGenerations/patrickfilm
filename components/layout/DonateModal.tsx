@@ -116,7 +116,7 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
                         as="h2"
                         className="text-2xl text-center leading-6 font-medium text-secondary-700"
                       >
-                        Thank you for your donation!
+                        Thank you for your gift!
                       </Dialog.Title>
 
                       <div className="mt-10">
@@ -124,8 +124,8 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
 
                         <Content space={false}>
                           <p className="text-green-600">
-                            With your donation, we will be able to produce and
-                            share this wonderful film about Saint Patrick.
+                            With your gift, we will be able to produce and share
+                            this wonderful film about Saint Patrick.
                           </p>
                         </Content>
                       </div>
@@ -160,16 +160,16 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
                         as="h2"
                         className="text-2xl text-center leading-6 font-medium text-secondary-700"
                       >
-                        Donate Now
+                        Give Now
                       </Dialog.Title>
 
                       <div className="mt-5">
                         <Content space={false}>
                           <p>
-                            Thank you for your desire to donate to the film
-                            Slave to Servant. With your donation, we will be
-                            able to produce and share this wonderful film about
-                            Saint Patrick.
+                            Thank you for your desire to give to the film Slave
+                            to Servant. Your gift of any amount will help make
+                            the production of this film a reality and touch the
+                            lives of many.
                           </p>
                         </Content>
 
@@ -217,7 +217,7 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
                       <Input
                         name="amount"
                         type="money"
-                        label="Your donation amount"
+                        label="Your gift amount"
                         value={pageState.amount}
                         onChange={(e) =>
                           setState(({total}) => ({
