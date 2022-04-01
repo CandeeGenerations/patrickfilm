@@ -109,7 +109,7 @@ const Home = (): React.ReactElement => {
             large
             rounded
           >
-            Donate Now
+            Give Now
           </ButtonLink>
         </Container>
       </Layout>
