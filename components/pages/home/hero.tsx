@@ -44,7 +44,7 @@ const Hero = (): React.ReactElement => {
             large
             className="mb-14"
           >
-            Donate Now
+            Give Now
           </ButtonLink>
 
           <p className="text-lg text-white">Watch the trailer below</p>

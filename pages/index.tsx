@@ -88,11 +88,11 @@ const Home = (): React.ReactElement => {
           </p>
 
           <p>
-            The production of this film is solely dependent on private
-            donations. We sincerely ask you to consider a generous donation of
-            any amount to help us reach our production budget and bring this
-            film to release. May the Lord use it to touch many, and may the
-            rewards abound to your account. God be glorified!
+            The production of this film is solely dependent on private gifts. We
+            sincerely ask you to consider a generous gift of any amount to help
+            us reach our production budget and bring this film to release. May
+            the Lord use it to touch many, and may the rewards abound to your
+            account. God be glorified!
           </p>
         </Content>
 
