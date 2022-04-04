@@ -1,6 +1,6 @@
 {
   "name": "patrickfilm",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": true,
   "scripts": {
     "dev": "doppler run --command='next dev -p 1701'",
@@ -25,8 +25,8 @@
     "next": "^12.1.4",
     "nookies": "^2.5.2",
     "postcss": "^8.4.6",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0",
     "react-paypal-button-v2": "^2.6.3",
     "tailwindcss": "^3.0.23"
@@ -37,7 +37,7 @@
     "@types/react": "^17.0.43",
     "@types/react-helmet": "^6.1.5",
     "cssnano": "^5.1.7",
-    "prettier": "^2.6.1",
+    "prettier": "^2.6.2",
     "standard-version": "^9.3.2",
     "typescript": "^4.6.3"
   },
