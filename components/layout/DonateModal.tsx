@@ -150,8 +150,13 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
               ) : pageState.success ? (
                 <>
                   <div>
-                    <div className="mx-auto flex items-center justify-center w-12 h-auto">
-                      <img src="/images/logo.svg" alt={siteTitle} />
+                    <div className="mx-auto flex items-center justify-center h-auto">
+                      <img
+                        src="/images/logo.svg"
+                        alt={siteTitle}
+                        className="w-auto"
+                        style={{maxWidth: 100}}
+                      />
                     </div>
 
                     <div className="mt-3 sm:mt-5">
@@ -194,8 +199,13 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
               ) : (
                 <>
                   <div>
-                    <div className="mx-auto flex items-center justify-center w-12 h-auto">
-                      <img src="/images/logo.svg" alt={siteTitle} />
+                    <div className="mx-auto flex items-center justify-center h-auto">
+                      <img
+                        src="/images/logo.svg"
+                        alt={siteTitle}
+                        className="w-auto"
+                        style={{maxWidth: 100}}
+                      />
                     </div>
 
                     <div className="mt-3 sm:mt-5">

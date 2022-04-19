@@ -23,7 +23,8 @@ const Hero = (): React.ReactElement => {
           <img
             src="/images/logo-white.svg"
             alt=""
-            className="w-16 lg:w-24 h-auto"
+            className="w-auto h-auto"
+            style={{maxWidth: 300}}
           />
 
           <h1 className="text-6xl font-king font-extrabold tracking-tight text-white lg:text-9xl mt-5 mb-10">
