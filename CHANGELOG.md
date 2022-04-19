@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/CandeeGenerations/patrickfilm/compare/v1.2.3...v1.3.0) (2022-04-19)
+
+
+### Features
+
+* added ability to save donations ([b12182e](https://github.com/CandeeGenerations/patrickfilm/commit/b12182ee55fb47b3e422b577a5276529c2758351))
+* updated icons ([07fb466](https://github.com/CandeeGenerations/patrickfilm/commit/07fb4665b2607b6c8d86d851b82027484afdb2e2))
+
 ### [1.2.3](https://github.com/CandeeGenerations/patrickfilm/compare/v1.2.2...v1.2.3) (2022-04-04)
 
 
