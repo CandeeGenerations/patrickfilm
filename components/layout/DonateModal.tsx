@@ -64,6 +64,9 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
   const calculateProgress = (goal: string, total: number): number =>
     Math.ceil((total / parseFloat(goal)) * 100)
 
+  const goalAchieved = (goal: string, total: number): boolean =>
+    total >= parseFloat(goal)
+
   const logDonation = async (result) => {
     await createDonation({
       amount: result.purchase_units[0].amount.value,
@@ -244,16 +247,23 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
                           <div
                             className="font-medium text-center p-0.5 pt-1 text-white leading-none h-6 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full"
                             style={{
-                              width: `${calculateProgress(
+                              width: goalAchieved(
                                 config.donation.goal,
                                 pageState.total,
-                              )}%`,
+                              )
+                                ? '100%'
+                                : `${calculateProgress(
+                                    config.donation.goal,
+                                    pageState.total,
+                                  )}%`,
                             }}
                           >
-                            {calculateProgress(
-                              config.donation.goal,
-                              pageState.total,
-                            ) >= 10
+                            {goalAchieved(config.donation.goal, pageState.total)
+                              ? 'Goal Achieved!'
+                              : calculateProgress(
+                                  config.donation.goal,
+                                  pageState.total,
+                                ) >= 10
                               ? `${calculateProgress(
                                   config.donation.goal,
                                   pageState.total,
