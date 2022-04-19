@@ -12,7 +12,7 @@ const Hero = (): React.ReactElement => {
       <div
         aria-hidden="true"
         className="flex items-center justify-center h-4/6 mb-12 bg-fixed bg-center md:bg-cover"
-        style={{backgroundImage: "url('/images/background-2.jpg')"}}
+        style={{backgroundImage: "url('/images/background.jpg')"}}
       >
         <div
           aria-hidden="true"
@@ -23,7 +23,8 @@ const Hero = (): React.ReactElement => {
           <img
             src="/images/logo-white.svg"
             alt=""
-            className="w-16 lg:w-24 h-auto"
+            className="w-auto h-auto"
+            style={{maxWidth: 300}}
           />
 
           <h1 className="text-6xl font-king font-extrabold tracking-tight text-white lg:text-9xl mt-5 mb-10">

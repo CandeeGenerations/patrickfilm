@@ -44,7 +44,7 @@ export const createDonation = async (
 ): Promise<IDonation> => {
   const result = await getGQLClient().request<{createDonation: IDonation}>(
     CREATE_DONATION,
-    donation,
+    {input: donation},
   )
 
   return result.createDonation
