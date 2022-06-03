@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/CandeeGenerations/patrickfilm/compare/v1.4.0...v1.5.0) (2022-06-03)
+
+
+### Features
+
+* director and actors sections, updates to the ferris films logo ([b3e6a6f](https://github.com/CandeeGenerations/patrickfilm/commit/b3e6a6f5dceb51e049c7cc1601545f0cea69f786))
+* feature updates ([73350fd](https://github.com/CandeeGenerations/patrickfilm/commit/73350fd7fd3727bc74430461401621651c7ec212))
+
 ## [1.4.0](https://github.com/CandeeGenerations/patrickfilm/compare/v1.3.0...v1.4.0) (2022-04-19)
 
 
