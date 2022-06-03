@@ -119,33 +119,6 @@ const Home = (): React.ReactElement => {
             Filmmaker". Shane has a passion for creating faith-based
             documentaries and short films.
           </p>
-
-          <p>
-            Patrick quoted the Apostle Paul extensively, and patterned his
-            ministry in Ireland after the church-planting ministry of the
-            apostle to the Gentiles. Like Paul, Patrick came to a sudden
-            realization of his sinful state, and with a repentant heart, placed
-            his trust in Jesus Christ as his Saviour. Later with great
-            missionary zeal, and against the advice of family, friends, and
-            religious leaders, Patrick put himself in harm's way to follow his
-            own "Macedonian call" and bring the gospel to a godless and pagan
-            people.
-          </p>
-
-          <p>
-            Our prayer is that God will use this film to cast a fresh vision of
-            Patrick's life and ministry, and that his missionary efforts will
-            continue to bear fruit today as his heart of surrender speaks to a
-            modern audience.
-          </p>
-
-          <p>
-            The production of this film is solely dependent on private gifts. We
-            sincerely ask you to consider a generous gift of any amount to help
-            us reach our production budget and bring this film to release. May
-            the Lord use it to touch many, and may the rewards abound to your
-            account. God be glorified!
-          </p>
         </Content>
 
         <Container>

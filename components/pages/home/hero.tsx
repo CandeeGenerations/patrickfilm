@@ -11,7 +11,7 @@ const Hero = (): React.ReactElement => {
     <div className="relative bg-gray-900">
       <div
         aria-hidden="true"
-        className="flex items-center justify-center h-4/6 mb-12 bg-fixed bg-center md:bg-cover"
+        className="flex items-center justify-center h-4/6 mb-12 md:bg-fixed bg-center md:bg-cover"
         style={{backgroundImage: "url('/images/background-2.jpg')"}}
       >
         <div

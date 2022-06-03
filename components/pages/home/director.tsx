@@ -19,7 +19,7 @@ const DirectorSection = (): React.ReactElement => {
 
           <div className="text-lg">
             <p className="text-gray-500 text-justify">
-              Since I was a teenage, I was involved in filmmaking. When I was
+              Since I was a teenager, I was involved in filmmaking. When I was
               27, I bought my first professional camera and began shooting
               regularly. I took a deeper dive into filmmaking in my late
               twenties for the sole cause of lifting up the name of Christ. My
