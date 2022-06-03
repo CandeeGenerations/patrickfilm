@@ -1,16 +1,16 @@
 import React from 'react'
-import {Helmet} from 'react-helmet'
 import ButtonLink from '../components/buttonLink'
 import Layout from '../components/layout'
 import Container from '../components/layout/Container'
 import Content from '../components/layout/Content'
 import DonateModal from '../components/layout/DonateModal'
+import ActorHeadshot from '../components/pages/home/actor'
+import DirectorSection from '../components/pages/home/director'
 import Hero from '../components/pages/home/hero'
 import SEO from '../components/seo'
 import Header from '../components/typography/Header'
 import config from '../config'
 import {setPageState} from '../helpers'
-import {siteTitle} from '../helpers/constants'
 import {gtagEvent} from '../libs/gtag'
 
 export interface IPageState {
@@ -21,6 +21,33 @@ export interface IPageState {
 export const HomeContext = React.createContext<{
   showHideDonateModal?: (open: boolean) => void
 }>({})
+
+const actors = [
+  {
+    name: 'Ronan Woods',
+    location: 'Dublin, Ireland',
+    character: 'Patrick',
+    image: '/images/ronan-image.jpg',
+  },
+  {
+    name: 'Matthew Brooks',
+    location: 'Pennsylvania, USA',
+    character: "Patrick's Father",
+    image: '/images/matt-image.jpg',
+  },
+  {
+    name: 'Kayla Stone',
+    location: 'Pennsylvania, USA',
+    character: "Patrick's Mother",
+    image: '/images/kayla-image.jpeg',
+  },
+  {
+    name: "Mark O'Donohoe",
+    location: 'Mullingar, Co. Westmeath, Ireland',
+    character: "Patrick's Slave Master",
+    image: '/images/mark-image.jpg',
+  },
+]
 
 const Home = (): React.ReactElement => {
   const {trailerUrl} = config.base
@@ -121,7 +148,28 @@ const Home = (): React.ReactElement => {
           </p>
         </Content>
 
-        <Container className="text-center">
+        <Container>
+          <Header>Director</Header>
+
+          <DirectorSection />
+        </Container>
+
+        <Container className="mt-24 text-center">
+          <Header>Cast</Header>
+
+          <ul
+            role="list"
+            className="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-5xl"
+          >
+            {actors.map((actor, key) => (
+              <li key={key}>
+                <ActorHeadshot {...actor} />
+              </li>
+            ))}
+          </ul>
+        </Container>
+
+        <Container className="text-center mt-24">
           <Header>Film Status: Pre-Production</Header>
         </Container>
 
@@ -140,14 +188,6 @@ const Home = (): React.ReactElement => {
           >
             Give Now
           </ButtonLink>
-
-          <img
-            src="/images/ferris-films-logo.png"
-            alt="Ferris Films"
-            title="Ferris Films"
-            className="w-auto h-auto mx-auto mt-48 mb-24"
-            style={{maxWidth: 200}}
-          />
         </Container>
       </Layout>
 
