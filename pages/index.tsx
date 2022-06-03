@@ -15,6 +15,7 @@ import {gtagEvent} from '../libs/gtag'
 
 export interface IPageState {
   open?: boolean
+  iframeWidth?: number
 }
 
 export const HomeContext = React.createContext<{
@@ -25,10 +26,35 @@ const Home = (): React.ReactElement => {
   const {trailerUrl} = config.base
   const [pageState, stateFunc] = React.useState<IPageState>({
     open: false,
+    iframeWidth: 675,
   })
 
   const setState = (state: IPageState) =>
     setPageState<IPageState>(stateFunc, pageState, state)
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth
+
+      setState({
+        iframeWidth:
+          width <= 1024 && width > 768
+            ? 500
+            : width <= 768 && width > 425
+            ? 300
+            : width <= 425
+            ? 200
+            : 675,
+      })
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
     <HomeContext.Provider
@@ -46,7 +72,7 @@ const Home = (): React.ReactElement => {
 
           {trailerUrl ? (
             <iframe
-              height={675}
+              height={pageState.iframeWidth}
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               src={trailerUrl}
@@ -57,15 +83,14 @@ const Home = (): React.ReactElement => {
           )}
         </Container>
 
-        <Content heading="About Slave to Servant">
+        <Content heading="About Slave to Servant" smallHeader>
           <p>
-            Slave to Servant is a new film by Ferris Films. This gripping story
-            of the world-renowned Patrick of Ireland comes alive through this
-            dramatized retelling. Patrick went from rebellious youth in Roman
-            Britain, to slave on the treacherous island of ancient Ireland, to
-            escape back to Britain, and finally, a return to Ireland as servant
-            and missionary of Jesus Christ. See this historical account
-            reenacted on screen as you’ve never seen it before.
+            Slave to Servant is a gripping, new, dramatized movie about the
+            early life of St. Patrick of Ireland. His remarkable life story
+            continues to captivate a modern audience. The movie is written and
+            directed by Shane Ferris, who calls himself the "Missionary
+            Filmmaker". Shane has a passion for creating faith-based
+            documentaries and short films.
           </p>
 
           <p>
@@ -97,6 +122,10 @@ const Home = (): React.ReactElement => {
         </Content>
 
         <Container className="text-center">
+          <Header>Film Status: Pre-Production</Header>
+        </Container>
+
+        <Container className="text-center">
           <ButtonLink
             onClick={() => {
               setState({open: true})
@@ -111,6 +140,14 @@ const Home = (): React.ReactElement => {
           >
             Give Now
           </ButtonLink>
+
+          <img
+            src="/images/ferris-films-logo.png"
+            alt="Ferris Films"
+            title="Ferris Films"
+            className="w-auto h-auto mx-auto mt-48 mb-24"
+            style={{maxWidth: 200}}
+          />
         </Container>
       </Layout>
 

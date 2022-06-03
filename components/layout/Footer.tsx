@@ -39,14 +39,14 @@ const Footer = () => {
       <div
         aria-hidden="true"
         className="flex items-center justify-center h-48 bg-fixed bg-center md:bg-cover"
-        style={{backgroundImage: "url('/images/background.jpg')"}}
+        style={{backgroundImage: "url('/images/background-2.jpg')"}}
       />
     </>
   )
 }
 
 const Border = styled.div`
-  margin: 140px auto 50px;
+  margin: 0 auto 50px;
   border-bottom: 1px solid rgba(8, 8, 11, 0.15);
 `
 

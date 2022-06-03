@@ -7,11 +7,13 @@ const Content = ({
   intro,
   children,
   space = true,
+  smallHeader = false,
 }: {
   heading?: string
   intro?: string
   children: React.ReactNode
   space?: boolean
+  smallHeader?: boolean
 }) => {
   return (
     <div
@@ -20,7 +22,7 @@ const Content = ({
       <div className="relative px-4 sm:px-6 lg:px-8">
         {(heading || intro) && (
           <div className="text-lg max-w-prose mx-auto">
-            {heading && <Header>{heading}</Header>}
+            {heading && <Header small={smallHeader}>{heading}</Header>}
 
             {intro && (
               <p className="mt-8 text-xl text-gray-500 leading-8">{intro}</p>

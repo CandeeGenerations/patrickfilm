@@ -229,7 +229,7 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
                           </p>
                         </Content>
 
-                        <Header>
+                        <Header small>
                           Goal: ${addCommas(parseFloat(config.donation.goal))}
                         </Header>
 

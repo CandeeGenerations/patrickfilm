@@ -4,9 +4,11 @@ import {classNames} from '../../helpers'
 const Header = ({
   children,
   className,
+  small = false,
 }: {
   children: React.ReactNode
   className?: string
+  small?: boolean
 }): React.ReactElement => {
   return (
     <div
@@ -15,7 +17,12 @@ const Header = ({
         className || '',
       )}
     >
-      <h2 className="mx-auto text-5xl font-king font-extrabold tracking-tight text-gray-900 lg:text-7xl">
+      <h2
+        className={classNames(
+          'mx-auto text-5xl font-berenika font-extrabold tracking-tight text-gray-900',
+          small ? '' : 'lg:text-7xl',
+        )}
+      >
         <span className="-mb-1 pb-1 block bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent pr-1">
           {children}
         </span>
