@@ -1,10 +1,10 @@
 import React from 'react'
+import {Helmet} from 'react-helmet'
+import ButtonLink from '../components/buttonLink'
 import Layout from '../components/layout'
 import Container from '../components/layout/Container'
 import Blockquote from '../components/typography/blockquote'
 import Headings from '../components/typography/headings'
-import ButtonLink from '../components/buttonLink'
-import {Helmet} from 'react-helmet'
 import {siteTitle} from '../helpers/constants'
 import {gtagEvent} from '../libs/gtag'
 

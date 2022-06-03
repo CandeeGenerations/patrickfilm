@@ -1,7 +1,9 @@
+import {css} from '@emotion/react'
 import {Dialog, Transition} from '@headlessui/react'
 import {CheckCircleIcon, XIcon} from '@heroicons/react/outline'
 import React, {Fragment, useState} from 'react'
 import {PayPalButton} from 'react-paypal-button-v2'
+import BarLoader from 'react-spinners/BarLoader'
 import {createDonation, findDonations} from '../../api'
 import config from '../../config'
 import {addCommas} from '../../helpers'
@@ -10,8 +12,6 @@ import {gtagEvent} from '../../libs/gtag'
 import Header from '../typography/Header'
 import Content from './Content'
 import Input from './Input'
-import BarLoader from 'react-spinners/BarLoader'
-import {css} from '@emotion/react'
 
 interface IDonateModal {
   open: boolean
