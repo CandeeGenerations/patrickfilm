@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import Container from '../components/layout/Container'
 import Content from '../components/layout/Content'
 import DonateModal from '../components/layout/DonateModal'
-import ActorHeadshot from '../components/pages/home/actor'
+import ActorHeadshot, {IActorHeadshot} from '../components/pages/home/actor'
 import DirectorSection from '../components/pages/home/director'
 import Hero from '../components/pages/home/hero'
 import SEO from '../components/seo'
@@ -22,7 +22,7 @@ export const HomeContext = React.createContext<{
   showHideDonateModal?: (open: boolean) => void
 }>({})
 
-const actors = [
+const actors: IActorHeadshot[] = [
   {
     name: 'Ronan Woods',
     location: 'Dublin, Ireland',
