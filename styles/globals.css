@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Kingthings-Exeter';
-  src: url('/fonts/Kingthings-Exeter.woff') format('woff');
+  font-family: 'Berenika-Book';
+  src: url('/fonts/Berenika-Book.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,8 +12,8 @@ body {
   background-color: #edf2f3;
 }
 
-.font-king {
-  font-family: 'Kingthings-Exeter';
+.font-berenika {
+  font-family: 'Berenika-Book';
 }
 
 a {

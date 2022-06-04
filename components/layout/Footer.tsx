@@ -12,8 +12,8 @@ const Footer = () => {
       <Container>
         <Border className="relative" />
 
-        <FooterWrapper className="relative flex items-center content-between lg:pb-20 pb-10 lg:flex-row flex-col">
-          <div className="flex-grow pb-3 lg:pb-0 text-center lg:text-left">
+        <FooterWrapper className="grid md:grid-cols-3 grid-rows-3 place-items-center relative content-between">
+          <div className="pb-3 lg:pb-0 md:justify-self-start justify-self-center mb-5 md:mb-0">
             Designed by{' '}
             <a
               href="https://candeegenerations.com?ref=patrickfilm.net"
@@ -30,7 +30,17 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="flex flex-grow-0">
+          <div>
+            <img
+              src="/images/ferris-films-logo.png"
+              alt="Ferris Films"
+              title="Ferris Films"
+              className="mx-auto"
+              style={{maxWidth: 100}}
+            />
+          </div>
+
+          <div className="md:justify-self-end justify-self-center mt-5 md:mt-0">
             &copy; 2022{year !== '2022' && ` - ${year}`}&nbsp;Ferris Films
           </div>
         </FooterWrapper>
@@ -38,15 +48,15 @@ const Footer = () => {
 
       <div
         aria-hidden="true"
-        className="flex items-center justify-center h-48 bg-fixed bg-center md:bg-cover"
-        style={{backgroundImage: "url('/images/background.jpg')"}}
+        className="flex items-center justify-center h-48 bg-fixed bg-bottom md:bg-cover"
+        style={{backgroundImage: "url('/images/background-2.jpg')"}}
       />
     </>
   )
 }
 
 const Border = styled.div`
-  margin: 140px auto 50px;
+  margin: 75px auto 50px;
   border-bottom: 1px solid rgba(8, 8, 11, 0.15);
 `
 
