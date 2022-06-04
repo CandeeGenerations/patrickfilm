@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/CandeeGenerations/patrickfilm/compare/v1.5.0...v1.5.1) (2022-06-04)
+
+
+### Bug Fixes
+
+* minor fixes ([a8c0132](https://github.com/CandeeGenerations/patrickfilm/commit/a8c0132dd017e65c583feebdf78b2ec391152438))
+* social icons ([6277147](https://github.com/CandeeGenerations/patrickfilm/commit/6277147ad074dbd6a9759b0751e85b3f4c557961))
+
 ## [1.5.0](https://github.com/CandeeGenerations/patrickfilm/compare/v1.4.0...v1.5.0) (2022-06-03)
 
 
