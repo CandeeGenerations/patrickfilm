@@ -31,17 +31,42 @@ const Footer = () => {
           </div>
 
           <div>
-            <img
-              src="/images/ferris-films-logo.png"
-              alt="Ferris Films"
-              title="Ferris Films"
-              className="mx-auto"
-              style={{maxWidth: 100}}
-            />
+            <a
+              href="https://ferrisfilms.net"
+              target="_blank"
+              onClick={() =>
+                gtagEvent({
+                  action: 'footer__ferris_films__image',
+                  category: 'engagement',
+                  label: 'click_event',
+                })
+              }
+            >
+              <img
+                src="/images/ferris-films-logo.png"
+                alt="Ferris Films"
+                title="Ferris Films"
+                className="mx-auto"
+                style={{maxWidth: 100}}
+              />
+            </a>
           </div>
 
           <div className="md:justify-self-end justify-self-center mt-5 md:mt-0">
-            &copy; 2022{year !== '2022' && ` - ${year}`}&nbsp;Ferris Films
+            &copy; 2022{year !== '2022' && ` - ${year}`}&nbsp;
+            <a
+              href="https://ferrisfilms.net"
+              target="_blank"
+              onClick={() =>
+                gtagEvent({
+                  action: 'footer__ferris_films__link',
+                  category: 'engagement',
+                  label: 'click_event',
+                })
+              }
+            >
+              Ferris Films
+            </a>
           </div>
         </FooterWrapper>
       </Container>
