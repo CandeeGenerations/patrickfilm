@@ -128,7 +128,7 @@ const Home = (): React.ReactElement => {
         </Container>
 
         <Container className="mt-24 text-center">
-          <Header>Cast</Header>
+          <Header>Top Cast</Header>
 
           <ul
             role="list"
