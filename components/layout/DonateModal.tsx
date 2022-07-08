@@ -1,4 +1,3 @@
-import {css} from '@emotion/react'
 import {Dialog, Transition} from '@headlessui/react'
 import {CheckCircleIcon, XIcon} from '@heroicons/react/outline'
 import React, {Fragment, useState} from 'react'
@@ -25,12 +24,6 @@ interface IPageState {
   success: boolean
   loading?: boolean
 }
-
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-`
 
 const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
   const [pageState, setState] = useState<IPageState>({
@@ -145,7 +138,11 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
                   <BarLoader
                     color="#20484f"
                     loading
-                    css={override}
+                    cssOverride={{
+                      display: 'block',
+                      margin: '0 auto',
+                      borderColor: 'red',
+                    }}
                     width={150}
                     height={4}
                   />

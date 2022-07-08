@@ -55,7 +55,7 @@ const actors: IActorHeadshot[] = [
         >
           1916: The Easter Rising
           <br />
-          Tom Clarke
+          as Tom Clarke
         </a>
       </>
     ),
