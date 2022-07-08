@@ -42,10 +42,25 @@ const actors: IActorHeadshot[] = [
     image: '/images/kayla-image.jpeg',
   },
   {
-    name: "Mark O'Donohoe",
-    location: 'Mullingar, Co. Westmeath, Ireland',
+    name: 'Rory Mullen',
+    location: (
+      <>
+        Dublin, Ireland
+        <br />
+        <a
+          href="https://youtu.be/18bQi2N7AtI"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs"
+        >
+          1916: The Easter Rising
+          <br />
+          Tom Clarke
+        </a>
+      </>
+    ),
     character: "Patrick's Slave Master",
-    image: '/images/mark-image.jpg',
+    image: '/images/rory-image.jpeg',
   },
 ]
 
@@ -143,7 +158,7 @@ const Home = (): React.ReactElement => {
         </Container>
 
         <Container className="text-center mt-24">
-          <Header>Film Status: Pre-Production</Header>
+          <Header>Film Status: Production</Header>
         </Container>
 
         <Container className="text-center">

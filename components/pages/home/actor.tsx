@@ -9,7 +9,7 @@ import Youtube from './icons/youtube'
 export interface IActorHeadshot {
   image: string
   name: string
-  location: string
+  location: React.ReactNode
   character: string
   social?: {
     facebook?: string
