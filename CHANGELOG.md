@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.7](https://github.com/CandeeGenerations/patrickfilm/compare/v1.5.6...v1.5.7) (2022-12-08)
+
+
+### Bug Fixes
+
+* added extra console.log ([4e8beac](https://github.com/CandeeGenerations/patrickfilm/commit/4e8beac9ebebee4449b195c0ad6a656d04fbc21d))
+* package updates ([6c420c5](https://github.com/CandeeGenerations/patrickfilm/commit/6c420c5242c02ffc0af8d6670196b98c5a3e3638))
+
 ### [1.5.6](https://github.com/CandeeGenerations/patrickfilm/compare/v1.5.5...v1.5.6) (2022-07-08)
 
 
