@@ -1,5 +1,5 @@
 import {Dialog, Transition} from '@headlessui/react'
-import {CheckCircleIcon, XIcon} from '@heroicons/react/outline'
+import {CheckCircleIcon, XMarkIcon} from '@heroicons/react/24/outline'
 import React, {Fragment, useState} from 'react'
 import {PayPalButton} from 'react-paypal-button-v2'
 import BarLoader from 'react-spinners/BarLoader'
@@ -129,7 +129,7 @@ const DonateModal = ({open, onChange}: IDonateModal): React.ReactElement => {
                   }}
                 >
                   <span className="sr-only">Close</span>
-                  <XIcon className="h-6 w-6" aria-hidden="true" />
+                  <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
 

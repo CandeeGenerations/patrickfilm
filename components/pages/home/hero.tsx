@@ -1,4 +1,4 @@
-import {ArrowNarrowDownIcon} from '@heroicons/react/outline'
+import {ArrowLongDownIcon} from '@heroicons/react/24/outline'
 import React from 'react'
 import {gtagEvent} from '../../../libs/gtag'
 import {HomeContext} from '../../../pages'
@@ -51,7 +51,7 @@ const Hero = (): React.ReactElement => {
 
           <p className="text-lg text-white">Watch the trailer below</p>
 
-          <ArrowNarrowDownIcon className="text-white h-10 w-10 mt-8" />
+          <ArrowLongDownIcon className="text-white h-10 w-10 mt-8" />
         </div>
       </div>
     </div>
