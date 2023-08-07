@@ -14,7 +14,7 @@ const Footer = () => {
 
         <FooterWrapper className="grid md:grid-cols-3 grid-rows-3 place-items-center relative content-between">
           <div className="pb-3 lg:pb-0 md:justify-self-start justify-self-center mb-5 md:mb-0">
-            Designed by{' '}
+            Powered by{' '}
             <a
               href="https://candeegenerations.com?ref=patrickfilm.net"
               target="_blank"
