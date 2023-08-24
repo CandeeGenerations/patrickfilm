@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.12](https://github.com/CandeeGenerations/patrickfilm/compare/v1.5.11...v1.5.12) (2023-08-24)
+
+
+### Bug Fixes
+
+* package updates ([174763e](https://github.com/CandeeGenerations/patrickfilm/commit/174763ed51b23b199ec905ea86db4a0dcc189272))
+
 ### [1.5.11](https://github.com/CandeeGenerations/patrickfilm/compare/v1.5.10...v1.5.11) (2023-08-07)
 
 
