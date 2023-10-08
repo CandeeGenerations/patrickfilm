@@ -1,6 +1,6 @@
 import {useRouter} from 'next/router'
 import React from 'react'
-import {Helmet} from 'react-helmet'
+import {Helmet} from 'react-helmet-async'
 import 'tailwindcss/tailwind.css'
 import * as gtag from '../libs/gtag'
 import '../styles/globals.css'

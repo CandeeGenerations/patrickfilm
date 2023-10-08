@@ -1,5 +1,4 @@
-import React from 'react'
-import {Helmet} from 'react-helmet'
+import {Helmet} from 'react-helmet-async'
 import ButtonLink from '../components/buttonLink'
 import Layout from '../components/layout'
 import Container from '../components/layout/Container'
