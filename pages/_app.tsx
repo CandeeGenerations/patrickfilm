@@ -1,6 +1,6 @@
 import {useRouter} from 'next/router'
 import React from 'react'
-import {Helmet} from 'react-helmet-async'
+import {Helmet, HelmetProvider} from 'react-helmet-async'
 import 'tailwindcss/tailwind.css'
 import * as gtag from '../libs/gtag'
 import '../styles/globals.css'
@@ -21,7 +21,7 @@ function PatrickFilmApp({Component, pageProps}) {
   }, [router.events])
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <link
           rel="stylesheet"
@@ -48,7 +48,7 @@ function PatrickFilmApp({Component, pageProps}) {
       </Helmet>
 
       <Component {...pageProps} />
-    </>
+    </HelmetProvider>
   )
 }
 
