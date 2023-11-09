@@ -2,11 +2,11 @@
   "name": "patrickfilm",
   "version": "1.5.15",
   "private": true,
+  "packageManager": "yarn@4.0.1",
   "scripts": {
     "dev": "NEXT_PUBLIC_APP_VERSION=$npm_package_version doppler run --command='next dev -p 1701'",
     "build": "NEXT_PUBLIC_APP_VERSION=$npm_package_version next build",
     "start": "NEXT_PUBLIC_APP_VERSION=$npm_package_version next start",
-    "export": "NEXT_PUBLIC_APP_VERSION=$npm_package_version next export",
     "release": "standard-version -a -- --release-as minor",
     "prepare": "husky install"
   },
@@ -46,11 +46,5 @@
     "prettier": "^3.0.3",
     "standard-version": "^9.5.0",
     "typescript": "^5.2.2"
-  },
-  "resolutions": {
-    "semver": "^7.5.2",
-    "@types/react": "^18.0.0",
-    "postcss": "^8.4.31"
-  },
-  "packageManager": "yarn@4.0.1"
+  }
 }
