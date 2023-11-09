@@ -7,6 +7,7 @@
     "dev": "NEXT_PUBLIC_APP_VERSION=$npm_package_version doppler run --command='next dev -p 1701'",
     "build": "NEXT_PUBLIC_APP_VERSION=$npm_package_version next build",
     "start": "NEXT_PUBLIC_APP_VERSION=$npm_package_version next start",
+    "export": "NEXT_PUBLIC_APP_VERSION=$npm_package_version next export",
     "release": "standard-version -a -- --release-as minor",
     "prepare": "husky install"
   },
